@@ -27,8 +27,8 @@ services:
       - KAFKA_CLIENT_PASSWORD=password
       - KAFKA_CERTIFICATE_PASSWORD=certificatePassword123
     volumes:
-      - './ssl/kafka.server.keystore.jks:/opt/bitnami/kafka/config/certs/kafka.keystore.jks:ro'
-      - './ssl/kafka.server.truststore.jks:/opt/bitnami/kafka/config/certs/kafka.truststore.jks:ro'
+      - './ssl/kafka.server.keystore.jks:/bitnami/kafka/config/certs/kafka.keystore.jks:ro'
+      - './ssl/kafka.server.truststore.jks:/bitnami/kafka/config/certs/kafka.truststore.jks:ro'
     depends_on:
       - zookeeper
     networks:
