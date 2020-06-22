@@ -26,8 +26,8 @@ services:
       - KAFKA_CLIENT_PASSWORD=password
       - KAFKA_CERTIFICATE_PASSWORD=certificatePassword123
     volumes:
-      - './keystore/kafka.keystore.jks:/opt/bitnami/kafka/conf/certs/kafka.keystore.jks:ro'
-      - './truststore/kafka.truststore.jks:/opt/bitnami/kafka/conf/certs/kafka.truststore.jks:ro'
+      - './keystore/kafka.keystore.jks:/bitnami/kafka/conf/certs/kafka.keystore.jks'
+      - './truststore/kafka.truststore.jks:/bitnami/kafka/conf/certs/kafka.truststore.jks'
     networks:
       - kafka-cluster-network
 
