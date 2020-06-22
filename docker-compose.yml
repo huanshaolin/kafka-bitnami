@@ -27,7 +27,7 @@ services:
       - KAFKA_CLIENT_PASSWORD=password
       - KAFKA_CERTIFICATE_PASSWORD=certificatePassword123
     volumes:
-      - '/home/hoanghao11/apache-kafka/ssl:/opt/bitnami/kafka/conf/certs/'
+      - /home/hoanghao11/apache-kafka/ssl/:/opt/bitnami/kafka/conf/certs/
     networks:
       - kafka-cluster-network
 
