@@ -27,7 +27,7 @@ services:
       - KAFKA_CLIENT_USER=user
       - KAFKA_CLIENT_PASSWORD=password
       - KAFKA_CERTIFICATE_PASSWORD=certificatePassword123
-      - "KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=SCRAM-SHA-256"
+      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=INTERNAL:SSL,CLIENT:SASL_SSL
 
     volumes:
       - './ssl/kafka.keystore.jks:/bitnami/kafka/config/certs/kafka.keystore.jks:ro'
